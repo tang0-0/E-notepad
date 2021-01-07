@@ -3,7 +3,7 @@ import { app, BrowserWindow } from 'electron';
 import { Menu, MenuItem, dialog, ipcMain } from 'electron';
 import { appMenuTemplate } from './appmenu.js';
 
-
+app.allowRendererProcessReuse = true;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,6 +14,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: { nodeIntegration: true }
   });
 
   // and load the index.html of the app.
@@ -21,7 +22,6 @@ const createWindow = () => {
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
-
   
   //主菜单
   const menu=Menu.buildFromTemplate(appMenuTemplate); //从模板创建主菜单

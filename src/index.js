@@ -7,7 +7,7 @@ let txtEditor = document.getElementById('txtEditor'); //获得TextArea文本框�
 
 document.title = "Notepad - Untitled"; //设置文档标题，影响窗口标题栏名称
 
-//给文本框增加右键菜单
+//右键菜单
 const contextMenuTemplate=[
     { role: 'undo' },       //Undo菜单项
     { role: 'redo' },       //Redo菜单项
@@ -19,7 +19,6 @@ const contextMenuTemplate=[
     { type: 'separator' },  //分隔线
     { role: 'selectall' }   //Select All菜单项
 ];
-
 const contextMenu=Menu.buildFromTemplate(contextMenuTemplate);
 txtEditor.addEventListener('contextmenu', (e)=>{
     e.preventDefault();
