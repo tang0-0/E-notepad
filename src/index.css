@@ -4,3 +4,19 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+
+#txtEditor{
+  width:786px;
+  height:539px;
+  padding:4px;
+  margin:0px;
+  border:0px;
+  font-size: 16px;
+  resize:none;
+  outline:none;
+}
+#txtEditor:focus{
+  border:0px;
+  outline:none;
+}
